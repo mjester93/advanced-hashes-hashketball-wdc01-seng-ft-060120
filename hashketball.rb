@@ -264,7 +264,14 @@ def winning_team
     away_score += x[:points]
   end
 
-  return max_points_name
+  if home_score > away_score
+    return game_hash[:home][:team_name]
+  elsif away_score > home_score
+    return game_hash[:away][:team_name]
+  else
+    return "TIE"
+  end
+
 end
 
 puts winning_team
