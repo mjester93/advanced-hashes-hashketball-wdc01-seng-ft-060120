@@ -250,3 +250,5 @@ def most_points_scored
 
   return max_points_name
 end
+
+puts most_points_scored
