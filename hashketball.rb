@@ -320,5 +320,3 @@ def long_name_steals_a_ton?
     return false
   end
 end
-
-puts long_name_steals_a_ton?
