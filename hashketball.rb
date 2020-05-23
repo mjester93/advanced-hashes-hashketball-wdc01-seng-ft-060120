@@ -298,6 +298,8 @@ end
 
 def long_name_steals_a_ton?
   longest_name = player_with_longest_name
+
+  return longest_name
 end
 
-puts player_with_longest_name
+puts long_name_steals_a_ton?
