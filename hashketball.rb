@@ -174,3 +174,19 @@ def team_names
     game_hash[:away][:team_name]
   ]
 end
+
+def player_numbers(team_name)
+  numbers = []
+
+  if game_hash[:home][:team_name] == team_name
+    game_hash[:home][:players].each do |x, values|
+      numbers.push(x[:number])
+    end
+  else
+    game_hash[:home][:players].each do |x, values|
+      numbers.push(x[:number])
+    end
+  end
+
+  return numbers
+end
