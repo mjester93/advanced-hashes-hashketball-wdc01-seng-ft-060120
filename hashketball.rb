@@ -235,19 +235,18 @@ def most_points_scored
   max_points_name = ""
 
   game_hash[:home][:players].each do |x, values|
-    if x[:shoe] >= max_shoe_size
-      max_shoe_size = x[:shoe]
-      max_shoe_size_name = x[:player_name]
+    if x[:points] >= max_points
+      max_points = x[:points]
+      max_points_name = x[:player_name]
     end
   end
 
   game_hash[:away][:players].each do |x, values|
-    if x[:shoe] >= max_shoe_size
-      max_shoe_size = x[:shoe]
-      max_shoe_size_name = x[:player_name]
+    if x[:points] >= max_points
+      max_points = x[:points]
+      max_points_name = x[:player_name]
     end
   end
 
-  puts max_shoe_size_name
-  return player_stats(max_shoe_size_name)[:rebounds]
+  return max_points_name
 end
