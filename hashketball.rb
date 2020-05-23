@@ -164,4 +164,5 @@ def team_colors(team_name)
     return game_hash[:home][:colors]
   else
     return game_hash[:away][:colors]
+  end
 end
