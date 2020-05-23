@@ -212,13 +212,13 @@ def big_shoe_rebounds
   max_shoe_size_name = ""
 
   game_hash[:home][:players].each do |x, values|
-    if x[:shoe] > max_shoe_size
+    if x[:shoe] >= max_shoe_size
       max_shoe_size_name = x[:player_name]
     end
   end
 
   game_hash[:away][:players].each do |x, values|
-    if x[:shoe] > max_shoe_size
+    if x[:shoe] >= max_shoe_size
       max_shoe_size_name = x[:player_name]
     end
   end
