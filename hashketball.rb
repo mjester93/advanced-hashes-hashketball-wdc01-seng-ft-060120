@@ -275,7 +275,24 @@ end
 
 
 def player_with_longest_name
+  max_letters = 0
+  max_letters_name = ""
 
+  game_hash[:home][:players].each do |x, values|
+    if x[:player_name].length >= max_letters
+      max_letters = x[:player_name].length
+      max_letters_name = x[:player_name]
+    end
+  end
+
+  game_hash[:away][:players].each do |x, values|
+    if x[:player_name].length >= max_letters
+      max_letters = x[:player_name].length
+      max_letters_name = x[:player_name]
+    end
+  end
+
+  return max_points_name
 end
 
 puts player_with_longest_name
