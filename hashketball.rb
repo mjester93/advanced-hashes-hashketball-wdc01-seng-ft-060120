@@ -205,3 +205,21 @@ def player_stats(player_name)
     end
   end
 end
+
+
+def big_shoe_rebounds
+  max_shoe_size = -99999
+  max_shoe_size_name = ""
+
+  game_hash[:home][:players].each do |x, values|
+    if x[:player_name] == player_name
+      return x
+    end
+  end
+
+  game_hash[:away][:players].each do |x, values|
+    if x[:player_name] == player_name
+      return x
+    end
+  end
+end
